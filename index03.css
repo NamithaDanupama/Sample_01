@@ -1,65 +1,175 @@
-body.contact-container {
+body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
-    background-size: cover;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.contact-container {
+main {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.contact-container, .contact-details {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 300px;
 }
 
-
-
-form {
+.contact-container form {
     display: flex;
     flex-direction: column;
 }
 
-label {
+.contact-container label {
     margin-bottom: 5px;
     color: #333;
 }
 
-input, textarea {
+.contact-container input, .contact-container textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
+    box-sizing: border-box;
 }
 
-button {
+.contact-container button {
     display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #04AA6D;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
-button:hover {
+.contact-container button:hover {
     background-color: #218838;
 }
-.button:active {
+
+.contact-container button:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}
+
+.contact-details {
+    border-style: inset;
+    background-color: #b8dbcc;
+    width: 200px;
+    height: 20px;
+    transition: width 2s, height 2s, transform 1s, opacity 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-details h3 {
+    margin-top: 0;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s;
+}
+
+.contact-details  p {
+    margin: 5px 0;
+    font-size: large;
+    opacity: 0;
+    transition: opacity 1s; 
+    text-align: left;
+    bottom: 60px;
+    right: 10px;
+    transform: translate(0, 0);
+}
+
+.contact-details:hover {
+    width: 200px;
+    height: 250px;
+}
+
+.contact-details:hover p {
+    opacity: 1;
+}
+
+.follow {
+    border-style:inset;
+    background-color: #bab8db;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    transition: width 2s, height 2s, transform 1s, opacity 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.follow h3 {
+    margin-top: 0;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s;
+}
+
+.follow  p {
+    margin: 5px 0;
+    font-size: large;
+    opacity: 0;
+    transition: opacity 1s; 
+    text-align: left;
+    bottom: 60px;
+    right: 10px;
+    transform: translate(0, 0);
+}
+
+.follow:hover {
+    width: 300px;
+    height: 200px;
+}
+
+.follow:hover p {
+    opacity: 1;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}
